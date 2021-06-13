@@ -1,0 +1,89 @@
+{% extends 'assignment/layout.html' %}
+{% block title %}
+User Details
+{% endblock %}
+{% block body %}
+<!-- Table markup-->
+<table summary="User Details" class="table table-bordered border-dark text-center">
+
+    <!-- Table header -->
+    <thead>
+        <tr>
+            <th>Details</th>
+            <th>Values</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <!-- Table body -->
+    <tbody>
+        <tr>
+            <td class="bold">Username</td>
+            <td id="current_username">{{request.user.name}}</td>
+            <td rowspan="3">
+                <button type="button" class="btn btn-outline-info btn-sm" id="edit_details_button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"><strong>Edit Details</strong></button>
+            </td>
+            <td rowspan="3">
+                <form action="{% url 'delete_details' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text" id="hide_this" name="user_mail" value="{{request.user.email}}">
+                    <button class="btn btn-outline-danger btn-sm" type="submit" id="Delete_Details">
+                        <strong>Delete Details</strong></button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td class="bold">Email</td>
+            <td id="current_email">{{request.user.email}}</td>
+        </tr>
+        <tr>
+            <td class="bold">Address</td>
+            <td id="current_address">{{request.user.address}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <form action="{% url 'logout' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" id="log_out_button" class="btn btn-outline-warning btn-sm">
+            Log Out
+        </button>
+    </form>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-2">
+                        <label for="username_here" class="col-form-label"><strong>Username</strong></label>
+                        <input type="text" class="form-control" id="username_here" value="{{request.user.name}}">
+                    </div>
+                    <div class="mb-2">
+                        <label for="email_here" class="col-form-label"><strong>Email</strong></label>
+                        <input type="text" class="form-control" id="email_here" value="{{request.user.email}}">
+                    </div>
+                    <div class="mb-2">
+                        <label for="address_here" class="col-form-label"><strong>Address</strong></label>
+                        <textarea class="form-control" id="address_here"> {{request.user.address}} </textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="close_modal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" id="save_changes_button" class="btn btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

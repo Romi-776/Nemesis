@@ -1,0 +1,41 @@
+body {
+  margin-top: 6% !important;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+table {
+  margin: auto;
+  margin-top: 13%;
+  width: 50% !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#edit_details_button,
+#Delete_Details {
+  margin-top: 37px;
+}
+
+#hide_this {
+  display: none;
+}
+
+#log_out_button,
+p {
+  margin-top: 10px;
+}
+
+.alert {
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+#signup_form, #login_form {
+    margin: auto;
+}
