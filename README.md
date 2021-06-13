@@ -1,5 +1,7 @@
 # Nemesis
-Task given by Nemesis Nemesis Consultants LLP for Python Development internship
+Task given by Nemesis Consultants LLP for Python Development internship\
+\
+Task completed without JWT authentication.
 
 # TASK
 
@@ -22,4 +24,3 @@ Screen 3: User Detail Page\
 3.On Edit option a modal will be option where user details will be edited\
 4.On delete user details will be deleted\
 5.Logout option\
-Note:- User authentication will be through JWT token and Session Should expire in 5 min.
