@@ -7,13 +7,15 @@ Task given by Nemesis Nemesis Consultants LLP for Python Development internship
 1.Email (Input)\
 2.Password (Input)\
 3.Login Button\
-4.SignUp Link\\
+4.SignUp Link\
+\
 Screen 2: Sign Up Form\
 1.Username\
 2.Email\
 3.Password\
 4.Confirm Password\
-5.Address\\
+5.Address\
+\
 Screen 3: User Detail Page\
 1.All User Detail except password will be shown in table\
 2.There will be edit and delete option in every row.\
