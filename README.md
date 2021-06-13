@@ -1,6 +1,4 @@
 # Nemesis
-Task given by Nemesis Consultants LLP for Python Development internship\
-\
 Task completed without JWT authentication.
 
 # TASK
