@@ -10,6 +10,7 @@ Task completed without JWT authentication.
 2.Password (Input)\
 3.Login Button\
 4.SignUp Link\
+<img src="ss1.png" alt="Login Page" width="300" height="300">
 ![Login Page](ss1.png | width=300)
 \
 Screen 2: Sign Up Form\
